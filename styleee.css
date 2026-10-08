@@ -1,0 +1,275 @@
+/* 1. RESET & BOX MODEL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1f0a33;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* 2. NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0214;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #591a8a;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #00f0ff;
+  letter-spacing: 1px;
+}
+
+.navbar nav a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00f0ff;
+}
+
+/* 3. HERO SECTION */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(11, 2, 20, 0.7), rgba(11, 2, 20, 0.85)), url("BAGROUND.png") center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px 100px;
+}
+
+/* BADGE PROMO */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 6px 14px;
+  background-color: #00f0ff;
+  color: #0b0214;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #e0d0f5;
+}
+
+/* SECTION UMUM */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+#tentang {
+  background-color: #170726;
+}
+
+#tentang p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #d8caea;
+  line-height: 1.8;
+}
+
+/* 4. GALLERY / PRODUK */
+#galery {
+  background-color: #1f0a33;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1050px;
+  margin: 30px auto 0;
+}
+
+.card {
+  background-color: #2c1247;
+  border: 1px solid #4a1f73;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 240, 255, 0.2);
+  border-color: #00f0ff;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #1a082b;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Bagian Teks di Dalam Kartu */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  color: #ffffff;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  color: #c9bedb;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.card-body h4 {
+  color: #00f0ff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-beli {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #00f0ff;
+  color: #0b0214;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-beli:hover {
+  background-color: #ffffff;
+  color: #1f0a33;
+}
+
+/* KONTAK SECTION */
+#kontak {
+  background-color: #170726;
+}
+
+#kontak p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #d8caea;
+  font-size: 15px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #00f0ff;
+  color: #0b0214;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 240, 255, 0.3);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  background-color: #0b0214;
+  color: #a698be;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 13px;
+  border-top: 1px solid #331350;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .navbar nav a {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 80px 15px 60px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+}
